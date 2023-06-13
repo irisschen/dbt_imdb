@@ -1,0 +1,12 @@
+
+target/
+dbt_packages/
+logs/
+data/
+.user.yml
+
+imdb.duckdb
+
+logs/
+.DS_Store
+Pipfile.lock

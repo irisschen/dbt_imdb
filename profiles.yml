@@ -1,0 +1,11 @@
+---
+dbt_imdb:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "imdb.duckdb"
+      extensions:
+          - httpfs
+      use_credential_provider: "aws"
+      threads: 4
