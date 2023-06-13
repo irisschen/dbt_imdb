@@ -1,0 +1,57 @@
+version: 2
+
+sources:
+  - name: std
+    tables:
+      - name: name.basics
+        meta:
+          external_location: read_csv_auto('data/name.basics.tsv', sample_size=-1, quote="\t")
+      - name: title.basics
+        meta:
+          external_location: read_csv_auto('data/title.basics.tsv', sample_size=-1, quote="\t")
+      - name: title.akas
+        meta:
+          external_location: read_csv_auto('data/title.akas.tsv', sample_size=-1, quote="\t")
+      - name: title.crew
+        meta:
+          external_location: read_csv_auto('data/title.crew.tsv', sample_size=-1, quote="\t")
+      - name: title.episode
+        meta:
+          external_location: read_csv_auto('data/title.episode.tsv', sample_size=-1, quote="\t")
+      - name: title.principals
+        meta:
+          external_location: read_csv_auto('data/title.principals.tsv', sample_size=-1, quote="\t")
+      - name: interaction_log
+        meta:
+          external_location: read_csv_auto('data/interaction_log.csv')
+
+models:
+  - name: std_movie_videos
+    description: transform data into standard dataset format
+  - name: std_genres
+    description: transform data into standard dataset format
+  - name: std_persons
+    description: transform data into standard dataset format
+  - name: std_movie_video_persons
+    description: transform data into standard dataset format
+  - name: std_content_rating
+    description: transform data into standard dataset format
+  - name: std_movie_video_content_ratings
+    description: transform data into standard dataset format
+  - name: std_movie_video_alternative_names
+    description: transform data into standard dataset format
+  - name: genres
+    description: read the video genres from standard dataset
+  - name: persons
+    description: read the persons from standard dataset
+  - name: video_genres
+    description: read the video_genres dataset from standard dataset
+  - name: videos
+    description: read the videos datasets from standard dataset
+    columns:
+      - name: video_id
+        tests:
+          - unique
+  - name: interaction
+
+  

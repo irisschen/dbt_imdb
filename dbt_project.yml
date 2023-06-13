@@ -34,6 +34,3 @@ models:
   dbt_imdb:
     # Config indicated by + and applies to all files under models/example/
     +materialized: table
-
-vars:
-  target_bucket_name: s3://dev-tf-kkc-arc-standard-datasets/imdb/

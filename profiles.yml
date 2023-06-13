@@ -5,7 +5,4 @@ dbt_imdb:
     dev:
       type: duckdb
       path: "imdb.duckdb"
-      extensions:
-          - httpfs
-      use_credential_provider: "aws"
       threads: 4
