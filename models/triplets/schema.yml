@@ -1,0 +1,50 @@
+models:
+  - name: triplets
+    description: "the triplets of metadtata"
+    columns:
+      - name: head_name
+        description: "title id"
+      - name: tail_type
+        description: "relation"
+      - name: tail_name
+        description: "tail name"
+    config:
+        location: "kg.tsv"
+        materialized: 'external'
+        delimiter: '\t'
+        format: 'csv'
+  
+  - name: intersect
+    description: remove interactions where the items do not exist in the metadata.
+    columns:
+      - name: item_id
+        tests:
+          - relationships:
+              to: ref('videos')
+              field: video_id
+  - name: train-cf
+    description: ouput the train-cf.tsv
+    config:
+      materialized: 'external'
+      location: "train-cf.tsv"
+      delimiter: '\t'
+      format: 'csv'
+    columns:
+      - name: user_id
+        tests:
+          - relationships:
+              to: ref('test-cf')
+              field: user_id
+  - name: test-cf
+    description: ouput the test-cf.tsv
+    config:
+      materialized: 'external'
+      location: "test-cf.tsv"
+      delimiter: '\t'
+      format: 'csv'
+    columns:
+      - name: user_id
+        tests:
+          - relationships:
+              to: ref('train-cf')
+              field: user_id

@@ -41,3 +41,5 @@ vars:
   interaction_type: ('click', 'play', 'purchase')
   interaction_start_date: '2023-06-07'
   interaction_end_date: '2023-06-09'
+  training_days: '2'
+  target_date: '{{ (modules.datetime.datetime.fromisoformat(var("interaction_start_date")) + modules.datetime.timedelta(var("training_days")|int)) }}'
