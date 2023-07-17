@@ -36,6 +36,7 @@ models:
     +materialized: table
 
 vars:
+  not_run_models: []
   content_rating: ['adult']
   interaction_type: ('click', 'play', 'purchase')
   interaction_start_date: '2023-06-07'

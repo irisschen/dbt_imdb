@@ -48,10 +48,21 @@ models:
     description: read the video_genres dataset from standard dataset
   - name: videos
     description: read the videos datasets from standard dataset
+    config:
+      content_rating: "{{var('content_rating')}}"
     columns:
       - name: video_id
         tests:
           - unique
   - name: interaction
+    description: import interaction logs and filter them based on specified dates. 
+    columns: 
+      - name: interaction_type
+        tests:
+          - in_accepted_value
+      - name: start_time
+        tests:
+          - interaction_dates
+  - name: video_persons
 
   
