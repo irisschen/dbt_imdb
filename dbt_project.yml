@@ -34,3 +34,9 @@ models:
   dbt_imdb:
     # Config indicated by + and applies to all files under models/example/
     +materialized: table
+
+vars:
+  content_rating: ['adult']
+  interaction_type: ('click', 'play', 'purchase')
+  interaction_start_date: '2023-06-07'
+  interaction_end_date: '2023-06-09'
