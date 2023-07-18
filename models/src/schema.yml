@@ -5,22 +5,22 @@ sources:
     tables:
       - name: name.basics
         meta:
-          external_location: read_csv_auto('data/name.basics.tsv', sample_size=-1, quote="\t")
+          external_location: read_csv_auto('data/name.basics.tsv.gz', sample_size=-1, quote="\t")
       - name: title.basics
         meta:
-          external_location: read_csv_auto('data/title.basics.tsv', sample_size=-1, quote="\t")
+          external_location: read_csv_auto('data/title.basics.tsv.gz', sample_size=-1, quote="\t")
       - name: title.akas
         meta:
-          external_location: read_csv_auto('data/title.akas.tsv', sample_size=-1, quote="\t")
+          external_location: read_csv_auto('data/title.akas.tsv.gz', sample_size=-1, quote="\t")
       - name: title.crew
         meta:
-          external_location: read_csv_auto('data/title.crew.tsv', sample_size=-1, quote="\t")
+          external_location: read_csv_auto('data/title.crew.tsv.gz', sample_size=-1, quote="\t")
       - name: title.episode
         meta:
-          external_location: read_csv_auto('data/title.episode.tsv', sample_size=-1, quote="\t")
+          external_location: read_csv_auto('data/title.episode.tsv.gz', sample_size=-1, quote="\t")
       - name: title.principals
         meta:
-          external_location: read_csv_auto('data/title.principals.tsv', sample_size=-1, quote="\t")
+          external_location: read_csv_auto('data/title.principals.tsv.gz', sample_size=-1, quote="\t")
       - name: interaction_log
         meta:
           external_location: read_csv_auto('data/interaction_log.csv')
