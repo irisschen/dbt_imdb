@@ -1,3 +1,9 @@
+# DBT_IMDB
+
+### The Project Documentation Website
+([URL](https://kkstream.github.io/dbt_imdb/#!/overview/dbt_imdb))
+
+---
 ### Step 1: Environment Setup
 * #### By pipenv
     1. Install pipenv ([URL](https://pipenv.pypa.io/en/latest/))
