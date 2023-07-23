@@ -14,6 +14,10 @@
   1. Run `pip install -r requirements.txt` at the repo's root directory
 
 ### Step 2: Preparing the Data
+* #### Automatic
+  1. Run `make` to download files
+
+* #### Manual
   1. Download the [IMDb dataset](https://datasets.imdbws.com/)
   2. Place all the files downloaded from IMDb into the `data` folder
 
