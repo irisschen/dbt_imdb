@@ -30,11 +30,11 @@ models:
       delimiter: '\t'
       format: 'csv'
     columns:
-      - name: user_id
+      - name: column0
         tests:
           - relationships:
               to: ref('test-cf')
-              field: user_id
+              field: column0
   - name: test-cf
     description: ouput the test-cf.tsv
     config:
@@ -43,8 +43,8 @@ models:
       delimiter: '\t'
       format: 'csv'
     columns:
-      - name: user_id
+      - name: column0
         tests:
           - relationships:
               to: ref('train-cf')
-              field: user_id
+              field: column0
