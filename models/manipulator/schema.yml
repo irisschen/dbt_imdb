@@ -6,6 +6,7 @@ models:
     description: "Remove blank, punctuation, numbers in persons"
     config:
       not_run_models: "{{ var('not_run_models') }}"
+      tags: ["piperider"]
     docs:
       show: "{{ 'reformat_persons' not in var('not_run_models')}}"
       node_color: '#DB7995'

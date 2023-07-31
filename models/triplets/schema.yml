@@ -9,6 +9,7 @@ models:
       - name: tail_name
         description: "tail name"
     config:
+        tags: ["piperider"]
         location: "kg.tsv"
         materialized: 'external'
         delimiter: '\t'
@@ -16,6 +17,8 @@ models:
   
   - name: intersect
     description: remove interactions where the items do not exist in the metadata.
+    config:
+      tags: ["piperider"]
     columns:
       - name: item_id
         tests:
@@ -25,6 +28,7 @@ models:
   - name: train-cf
     description: ouput the train-cf.tsv
     config:
+      tags: ["piperider"]
       materialized: 'external'
       location: "train-cf.tsv"
       delimiter: '\t'
@@ -38,6 +42,7 @@ models:
   - name: test-cf
     description: ouput the test-cf.tsv
     config:
+      tags: ["piperider"]
       materialized: 'external'
       location: "test-cf.tsv"
       delimiter: '\t'

@@ -54,6 +54,7 @@ jmespath = "==1.0.1"
 numpy = "==1.24.3"
 s3transfer = "==0.6.1"
 tzdata = "==2023.3"
+piperider = {version = "*", extras = ["duckdb"]}
 
 [dev-packages]
 
