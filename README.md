@@ -1,7 +1,7 @@
 # DBT_IMDB
 
 ### The Project Documentation Website
-([URL](https://kkstream.github.io/dbt_imdb/#!/overview/dbt_imdb))
+([URL](https://irisschen.github.io/dbt_imdb/#!/overview))
 
 ---
 ### Step 1: Environment Setup
